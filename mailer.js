@@ -66,10 +66,11 @@ Meaning: ${randomQuote.meaning}
 }
 
 //  Schedule cron job — everyday at 8am
-cron.schedule("0 7 * * *", () => {
+cron.schedule("*/30 * * *", () => {
   console.log("⏰ Running scheduled job...");
   sendDailyQuote();
 });
 
 // Export if needed
 export default sendDailyQuote;
+
